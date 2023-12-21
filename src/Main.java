@@ -8,5 +8,6 @@ public class Main {
         System.out.println("World is beautiful!");
 
         int a = 10 + 80;
+        int c = 50;
     }
 }
