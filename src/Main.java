@@ -5,5 +5,8 @@ public class Main {
         for (int i = 1; i <= 10; i++) {
             System.out.println(i);
         }
+        System.out.println("World is beautiful!");
+
+        int a = 10 + 80;
     }
 }
