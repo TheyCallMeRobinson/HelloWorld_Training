@@ -20,4 +20,6 @@ public class VetClinic {
             System.out.println(animalList[i].getName());
         }
     }
+
+
 }

@@ -1,7 +1,9 @@
 import abstr.Animal;
+import abstr.Livable;
 import abstr.Meowable;
+import abstr.Walkable;
 
-public class Cat extends Animal implements Meowable {
+public class Cat extends Animal implements Livable, Meowable, Walkable {
     private double earSize;
     private int vibrissCount;
 
@@ -76,5 +78,15 @@ public class Cat extends Animal implements Meowable {
 
     public void setBegForFood(String begForFood) {
         this.begForFood = begForFood;
+    }
+
+    @Override
+    public void walk() {
+
+    }
+
+    @Override
+    public void live() {
+
     }
 }
