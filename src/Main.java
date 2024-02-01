@@ -1,15 +1,26 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(i);
-        }
-        System.out.println("World is beautiful!");
-        System.out.println("World is even more beautiful");
+        Node f = new Node("F", new ArrayList<>());
+        Node e = new Node("E", new ArrayList<>());
+        Node d = new Node("D", new ArrayList<>());
+        Node b = new Node("B", new ArrayList<>());
+        Node c = new Node("C", new ArrayList<>());
+        Node a = new Node("A", new ArrayList<>());
 
-        int a = 10 + 80;
-        int c = 50;
-        int b = -10 + 30 - c;
+        b.getAdjacentNodes().add(d);
+        b.getAdjacentNodes().add(e);
+
+        c.getAdjacentNodes().add(f);
+
+        a.getAdjacentNodes().add(b);
+        a.getAdjacentNodes().add(c);
+
+        CustomTree customTree = new CustomTree(a);
+
+        System.out.println(TreeSearchService.depthFirstSearch(customTree));
+        System.out.println(TreeSearchService.breadthFirstSearch(customTree));
     }
 }
